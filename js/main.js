@@ -1,3 +1,5 @@
 
-const el = React.createElement('h1',{id:'title'}, 'Josselyn Quinde');
-ReactDOM.render(el,document.getElementById('div_saludo'));
+
+const user = 'Josselyn Quinde';
+const saludo = <h1>Hola, soy {user}</h1>;
+ReactDOM.render(saludo,document.getElementById('div_saludo'));
