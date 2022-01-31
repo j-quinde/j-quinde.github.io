@@ -1,5 +1,3 @@
-import React from 'react';
 
-const user = 'Josselyn Quinde';
-const saludo = <h1>Hola, soy {user}</h1>;
+const saludo = React.createElement('h1',{id:'title'}, 'Josselyn Quinde');
 ReactDOM.render(saludo,document.getElementById('div_saludo'));
