@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const user = 'Josselyn Quinde';
 const saludo = <h1>Hola, soy {user}</h1>;
