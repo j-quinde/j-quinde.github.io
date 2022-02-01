@@ -10,10 +10,5 @@ ReactDOM.render(saludo,document.getElementById('div_saludo'));
 }
 ReactDOM.render(<Saludar name="Josselyn Quinde" />,document.getElementById('div_saludo'));*/
 
-const User = props => {
-    return (
-        <h1>Hola, soy {props.name}</h1>
-
-    )
-};
+const User = props => <h1>Hola, soy {props.name}</h1>;
 ReactDOM.render(<User name="Josselyn Quinde" />,document.getElementById('div_saludo'));
