@@ -1,4 +1,6 @@
 
+import React from 'react';
+import ReactDOM from 'react-dom';
 /*
 const user = 'Josselyn Quinde';
 const saludo = <h1>Hola, soy {user}</h1>;
