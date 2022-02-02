@@ -1,6 +1,4 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 /*
 const user = 'Josselyn Quinde';
 const saludo = <h1>Hola, soy {user}</h1>;
@@ -14,3 +12,16 @@ ReactDOM.render(<Saludar name="Josselyn Quinde" />,document.getElementById('div_
 
 const User = props => <h1>Hola, soy {props.name}</h1>;
 ReactDOM.render(<User name="Josselyn Quinde" />,document.getElementById('div_saludo'));
+
+
+function OpenAlert() {
+    const alert = () => {
+        alert("Hola");
+    }
+
+    return(
+        <button onClick={alert}>+Ver más</button>
+    );
+}
+
+ReactDOM.render(<OpenAlert/>,document.getElementById('div_vermas'));
