@@ -15,12 +15,12 @@ ReactDOM.render(<User name="Josselyn Quinde" />,document.getElementById('div_sal
 
 
 function OpenAlert() {
-    const alert = () => {
+    const alerta = () => {
         alert("Hola");
     }
 
     return(
-        <button onClick={alert}>+Ver más</button>
+        <button onClick={alerta}>+Ver más</button>
     );
 }
 
