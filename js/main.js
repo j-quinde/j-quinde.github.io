@@ -24,4 +24,4 @@ function OpenAlert() {
     );
 }
 
-ReactDOM.render(<OpenAlert/>,document.getElementById('div_vermas'));
+ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
