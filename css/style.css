@@ -3,8 +3,7 @@ body::after {
     opacity: 0.75;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%; 
-    z-index: -1;   
+    background-size: 100% 100%;  
   }
 
 .image-background {
