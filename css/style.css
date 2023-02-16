@@ -10,7 +10,7 @@
               url("../img/wallpaper.jpg");
   }*/
 
-.image-background {
+/*.image-background {
     background-image: url("../img/wallpaper.jpg");
     
     background-repeat: no-repeat;
@@ -20,6 +20,13 @@
 
 .image-background::before {
     opacity: 0.75;
+}*/
+
+.img-body{
+    opacity: 0.75;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
 }
 nav {
     list-style-type: none;
