@@ -16,9 +16,12 @@
     background-attachment: fixed;
     background-size: 100% 100%; 
 }
-
 .image-background::before {
     opacity: 0.75;
+}
+.img-photo{
+    width: 30%;
+    height: auto;
 }
 nav {
     list-style-type: none;
