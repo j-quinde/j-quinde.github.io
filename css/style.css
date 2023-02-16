@@ -3,10 +3,14 @@ body {
 }
 .image-background {
     background-image: url("../img/wallpaper.jpg");
-    opacity: 0.75;
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%; 
+}
+
+.image-background::before {
+    opacity: 0.75;
 }
 nav {
     list-style-type: none;
