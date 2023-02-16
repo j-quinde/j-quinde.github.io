@@ -1,4 +1,4 @@
-body::after {
+body::before {
     background-image: url("../img/wallpaper.jpg");
     opacity: 0.75;
     background-repeat: no-repeat;
