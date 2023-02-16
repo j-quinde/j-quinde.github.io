@@ -24,6 +24,9 @@
     height: auto;
     border-radius: 50%;
 }
+#home{
+    display: flex;
+}
 nav {
     list-style-type: none;
     margin: 0;
