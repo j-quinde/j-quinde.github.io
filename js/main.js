@@ -9,7 +9,7 @@ ReactDOM.render(saludo,document.getElementById('div_saludo'));
     return <h1>Hola, soy {props.name}</h1>
 }
 ReactDOM.render(<Saludar name="Josselyn Quinde" />,document.getElementById('div_saludo'));*/
-
+/*
 const User = props => <h1>Hola, soy {props.name}</h1>;
 ReactDOM.render(<User name="Josselyn Quinde" />,document.getElementById('div_saludo'));
 
@@ -25,7 +25,7 @@ function OpenAlert() {
 }
 
 ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
-
+*/
 const btn_pokedex = () => {
     window.open("https://j-quinde.github.io/pokedex/", "mozillaTab");
 }
