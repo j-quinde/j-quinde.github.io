@@ -27,5 +27,6 @@ function OpenAlert() {
 ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
 */
 const btn_pokedex = () => {
+    console.log("entra");
     window.open("https://j-quinde.github.io/pokedex/", "mozillaTab");
 }
