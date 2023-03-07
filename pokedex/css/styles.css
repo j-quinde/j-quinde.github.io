@@ -1,0 +1,153 @@
+
+.navbar{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.logo-pokedex{
+    height: auto;
+    width: 13%;
+}
+
+.container{
+    margin-top: 5rem;
+}
+
+.horizontal-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card{
+    text-align: center;
+    width: 15rem;
+    height: 17rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform .2s;
+}
+
+.card:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+    z-index: 1000;
+  }
+
+.spinner-border{
+    height: 8rem;
+    width: 8rem;
+    align-self: center;
+}
+
+.card-img-top{
+    height: 10rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.number-pkm{
+    color: #A4A4A4 !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.type-pokemon{
+    border-radius: 30px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: arial; color: white;
+}
+
+.normal{
+    background-color: #A8A77A;
+}
+
+.fire{
+    background-color: #EE8130;
+}
+
+.water{
+    background-color: #6390F0;
+}
+
+.grass{
+    background-color: #7AC74C;
+}
+
+.flying{
+    background-color: #A98FF3;
+}
+
+.fighting{
+    background-color: #C22E28;
+}
+
+.poison{
+    background-color: #A33EA1;
+}
+
+.electric{
+    background-color: #F7D02C;
+}
+
+.ground{
+    background-color: #E2BF65;
+}
+
+.rock{
+    background-color: #B6A136;
+}
+
+.psychic{
+    background-color: #F95587;
+}
+
+.ice{
+    background-color: #96D9D6;
+}
+
+.bug{
+    background-color: #A6B91A;
+}
+
+.ghost{
+    background-color: #735797;
+}
+
+.steel{
+    background-color: #B7B7CE;
+}
+
+.dragon{
+    background-color: #6F35FC;
+}
+
+.dark{
+    background-color: #705746;
+}
+
+.fairy{
+    background-color: #D685AD;
+}
+
+.li-pokemon {
+    flex-direction: row !important;
+    /* You can also add some margins here to make it look prettier */
+}
+
+.page-item{
+    cursor: pointer;
+}
+
+.footer{
+    background-color: #000000;
+    color: white;
+}
