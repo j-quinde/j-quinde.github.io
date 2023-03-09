@@ -123,3 +123,8 @@ p {
     width: auto;
 }
 
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
