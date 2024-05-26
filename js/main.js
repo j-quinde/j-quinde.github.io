@@ -29,3 +29,15 @@ ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
 const btn_pokedex = () => {
     window.open("https://j-quinde.github.io/pokedex/");
 }
+
+const navItems = document.querySelectorAll("nav a");
+
+navItems.forEach(item => {
+    item.addEventListener('click', function () {
+        const itemActive = document.querySelector('nav a.active');
+        if(itemActive){
+            itemActive.classList.remove('active');
+        }
+        item.classList.add('active');
+    });
+});
