@@ -55,6 +55,91 @@
 
 /*FIN NAVBAR #1*/
 
+/*INICIO*/
+section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#home {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../img/background-image2.jpg') no-repeat;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: 50%;
+}
+
+.homeContainer {
+    width: 100%;
+    align-content: center;
+    margin-left: 1rem;
+}
+
+.homeContainer h1, .homeContainer p {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+}
+
+.homeContainer h1{
+    font-size: 40px;
+}
+
+.homeContainer p{
+    font-size: 20px;
+}
+
+.my-name{
+    color: #1abc9c !important;
+}
+
+#about-me{
+    text-align: center;
+}
+
+.aboutContainer{
+    margin-top: 10px;
+}
+
+#skills{
+    text-align: center;
+}
+
+.skillsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.icons-all-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    text-align: center;
+}
+
+.skill-icon:hover {
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+    transition: transform .3s;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue;
+}
+
+.font-skill {
+    font-weight: 600;
+}
+
+/*FIN INICIO*/
+
 /*MI FOTO*/
 .img-photo {
     width: 100%;
@@ -65,32 +150,13 @@
 /*FIN MI FOTO*/
 
 /*LOGOS*/
-.container-skills {
-    width: 100%;
-}
 
-.icons-skills {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
-    text-align: center;
-}
 
-.logo-tech:hover {
-    -ms-transform: scale(1.2);
-    /* IE 9 */
-    -webkit-transform: scale(1.2);
-    /* Safari 3-8 */
-    transform: scale(1.2);
-    transition: transform .3s;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue;
-}
 
-.font-logo {
-    font-weight: 600;
-}
+
+
+
+
 
 /*FIN LOGOS*/
 
@@ -162,15 +228,15 @@ a .active {
     margin: auto;
 }
 
-p {
+/*p {
     color: white;
-}
+}*/
 
-h1,
+/*h1,
 h3,
 h4 {
     color: black;
-}
+}*/
 
 .text-center {
     text-align: center;
