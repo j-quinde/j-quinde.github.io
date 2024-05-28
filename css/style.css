@@ -56,9 +56,21 @@
 /*FIN NAVBAR #1*/
 
 /*INICIO*/
-section{
+section {
     margin-top: 30px;
     margin-bottom: 30px;
+    scroll-margin-top: 60px;
+    text-align: center;
+}
+
+.line {
+    /*color: #2E9AFE;*/
+    color: red;
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #home {
@@ -77,51 +89,49 @@ section{
     margin-left: 1rem;
 }
 
-.homeContainer h1, .homeContainer p {
+.homeContainer h1,
+.homeContainer p {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
 }
 
-.homeContainer h1{
+.homeContainer h1 {
     font-size: 40px;
 }
 
-.homeContainer p{
+.homeContainer p {
     font-size: 20px;
 }
 
-.my-name{
+.my-name {
     color: #1abc9c !important;
 }
 
-#about-me{
-    text-align: center;
-}
 
-.aboutContainer{
+.aboutContainer {
     margin-top: 10px;
-}
-
-#skills{
-    text-align: center;
 }
 
 .skillsContainer {
-    width: 100%;
+    width: 50%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icons-all-skills {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 100px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icon {
+    justify-content: center;
 }
 
 .skill-icon:hover {
@@ -136,6 +146,24 @@ section{
 
 .font-skill {
     font-weight: 600;
+    margin: 0;
+}
+
+#work-experience{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.workContainer{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work{
+    background-color: #34495e;    
 }
 
 /*FIN INICIO*/
@@ -221,12 +249,7 @@ a .active {
     color: red;
 }
 
-.line {
-    /*color: #2E9AFE;*/
-    color: red;
-    width: 75%;
-    margin: auto;
-}
+
 
 /*p {
     color: white;
@@ -251,7 +274,7 @@ i {
     background-color: #BDBDBD;
 }
 
-footer p {
+.footer p {
     color: black;
     margin: auto;
 }
