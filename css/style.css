@@ -119,7 +119,11 @@ section {
     font-size: 18px;
 }
 
-.about-description{
+.aboutContainer p {
+    font-size: 15px;
+}
+
+.about-description {
     text-align: center;
     font-size: 16px;
 }
@@ -159,40 +163,114 @@ section {
     margin: 0;
 }
 
-#work-experience{
+#work-experience {
     width: 100%;
 }
 
-.workContainer{
+.workContainer {
     width: 50%;
     display: inline-block;
     vertical-align: middle;
 }
 
-.work{
-    background-color: #34495e;    
+.work {
+    background-color: #34495e;
     padding: 15px 0 15px 0;
     margin: 10px 0 10px 0;
-    
+
 }
 
-.work h5{
+.work h5 {
     color: #1abc9c;
 }
 
-.work h7{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+.work h7 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
     color: #BDBDBD;
 }
 
-.work-description{
+.work-description {
     text-align: justify !important;
     color: #ffffff !important;
     margin: 15px 10px 15px 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
+
+.item-carousel {
+    margin: 0 15px 60px;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    background: #343434 no-repeat center center / cover;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    animation-name: hover-delay;
+}
+
+.item-carousel:hover {
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.item-carousel p {
+    display: none;
+}
+
+.item-carousel:hover p {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    color: #ffffff;
+}
+
+@keyframes hover-delay {
+    100% {
+        display: block;
+    }
+}
+
+.item-1 {
+    background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg);
+}
+
+.item-carousel:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.item-desc {
+    padding: 0 24px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(calc(100% - 54px));
+    -webkit-transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    text-align: justify;
+    transform: none;
+    -webkit-transform: none;
+    text-decoration: none;
+}
+
+
 
 /*FIN INICIO*/
 
