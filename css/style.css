@@ -150,20 +150,36 @@ section {
 }
 
 #work-experience{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 100%;
 }
 
 .workContainer{
     width: 50%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .work{
     background-color: #34495e;    
+    padding: 15px 0 15px 0;
+    margin: 10px 0 10px 0;
+    
+}
+
+.work h5{
+    color: #1abc9c;
+}
+
+.work h7{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #BDBDBD;
+}
+
+.work-description{
+    text-align: justify !important;
+    color: #ffffff !important;
+    margin: 15px 10px 15px 10px;
 }
 
 /*FIN INICIO*/
