@@ -232,6 +232,16 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
+
+.item-desc:hover {
+    transform: none !important;
+    -webkit-transform: none !important;
+    
+    opacity: 0;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
 .item-desc {
     padding: 0 24px 12px;
     color: #fff;
@@ -239,19 +249,13 @@ section {
     z-index: 1;
     overflow: hidden;
     text-align: justify;
+    transform: translateY(calc(100% - 54px))
 }
 
-.item-desc:hover {
-    transform: none;
-    -webkit-transform: none;
-}
+
 
 .item-desc p {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(32px);
-    -webkit-transform: translateY(32px);
-    /*height:0px; max-height:150px;*/
+    /*visibility: hidden;*/
 }
 
 .item-carousel:hover .item-desc p {
@@ -266,6 +270,11 @@ section {
 
 .item-1 {
     background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg);
+}
+
+.proyectsContainer{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /*FIN INICIO*/
