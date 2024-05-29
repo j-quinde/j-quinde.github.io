@@ -21,6 +21,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     align-items: center;
+    z-index: 100;
 }
 
 .nav-1 a {
@@ -315,10 +316,12 @@ section {
     opacity: 0.75;
 }
 
-
-
-.text-center {
-    text-align: center;
+.contactConatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 i {
@@ -338,10 +341,7 @@ i {
 
 
 .items-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .a-contact {

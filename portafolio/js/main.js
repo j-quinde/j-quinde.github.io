@@ -26,12 +26,11 @@ function OpenAlert() {
 
 ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
 */
-const btn_pokedex = () => {
+const openPokedex = () => {
     window.open("https://j-quinde.github.io/pokedex/");
 }
 
 const navItems = document.querySelectorAll("nav a");
-
 navItems.forEach(item => {
     item.addEventListener('click', function () {
         const itemActive = document.querySelector('nav a.active');
