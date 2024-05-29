@@ -236,7 +236,6 @@ section {
 .item-desc:hover {
     transform: none !important;
     -webkit-transform: none !important;
-    
     opacity: 0;
     transform: translateY(0);
     -webkit-transform: translateY(0);
