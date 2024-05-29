@@ -271,6 +271,10 @@ section {
     -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
 
+.item-carousel .item-desc p {
+    opacity: 0 !important;
+}
+
 .item-carousel:hover .item-desc p {
     opacity: 1 !important;
 }
