@@ -109,7 +109,9 @@ section {
     color: #1abc9c !important;
 }
 
+/*FIN INICIO*/
 
+/*ABOUT ME*/
 .aboutContainer {
     width: 70%;
     margin-top: 10px;
@@ -128,6 +130,9 @@ section {
     font-size: 16px;
 }
 
+/*FIN ABOUT ME*/
+
+/*SKILLS*/
 .skillsContainer {
     width: 50%;
     display: flex;
@@ -163,6 +168,9 @@ section {
     margin: 0;
 }
 
+/*FIN SKILLS*/
+
+/*WORK EXPERIENCE*/
 #work-experience {
     width: 100%;
 }
@@ -197,7 +205,9 @@ section {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
+/*FIN WORK EXPERIENCE*/
 
+/*MY PROJECTS*/
 .item-carousel {
     margin: 0 15px 60px;
     width: 320px;
@@ -232,33 +242,37 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
+.item-desc {
+    padding: 0 24px 12px;
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+    transform: translateY(calc(100% - 38px));
+    color: #ffffff;
+}
+
+.item-desc p {
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0.2s;
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
 
 .item-desc:hover {
-    transform: none !important;
-    -webkit-transform: none !important;
-    opacity: 0;
+    transform: none;
+    -webkit-transform: none;
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }
 
-.item-desc {
-    padding: 0 24px 12px;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    text-align: justify;
-    transform: translateY(calc(100% - 54px))
-}
-
-
-.item-carousel:hover .item-desc p {
-    visibility: visible;
-    color: #ffffff;
-    opacity: 1;
+.item-carousel:hover .item-desc {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: all 0.4s ease-in-out 0.2s;
     -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+
+.item-carousel:hover .item-desc p {
+    opacity: 1 !important;
 }
 
 .item-1 {
@@ -269,8 +283,9 @@ section {
     display: inline-block;
     vertical-align: middle;
 }
+/*FIN MY PROJECTS*/
 
-/*FIN INICIO*/
+
 
 /*MI FOTO*/
 .img-photo {
@@ -278,27 +293,8 @@ section {
     height: auto;
     border-radius: 50%;
 }
-
 /*FIN MI FOTO*/
 
-/*LOGOS*/
-
-
-
-
-
-
-
-
-/*FIN LOGOS*/
-
-.card {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.card-title {
-    margin-bottom: 0px;
-}
 
 .image-background {
     /*background-image: url("../img/wallpaper.jpg");*/
@@ -316,42 +312,6 @@ section {
 }
 
 
-
-/*nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #4C5A6A;
-}*/
-.container {
-    margin-top: calc(3rem);
-}
-
-
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/*li a:hover:not(.active) {
-    color: #0174DF;
-}*/
-li a:hover {
-    color: black;
-}
-
-a .active {
-    color: red;
-}
 
 .text-center {
     text-align: center;
@@ -391,26 +351,8 @@ i {
     text-decoration: none;
 }
 
-.btn-light {
-    border-color: black;
-}
 
-.btn:hover {
-    background-color: #BDBDBD;
-}
 
-.card-text {
-    color: black;
-}
-
-p {
-    color: black;
-}
-
-.img-work {
-    height: 3rem;
-    width: auto;
-}
 
 .flex-container {
     display: flex;
