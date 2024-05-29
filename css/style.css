@@ -247,16 +247,10 @@ section {
     color: #fff;
     position: relative;
     z-index: 1;
-    overflow: hidden;
     text-align: justify;
     transform: translateY(calc(100% - 54px))
 }
 
-
-
-.item-desc p {
-    /*visibility: hidden;*/
-}
 
 .item-carousel:hover .item-desc p {
     visibility: visible;
