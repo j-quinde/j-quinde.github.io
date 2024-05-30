@@ -226,18 +226,16 @@
      display: none;
  }
 
- #my-proyects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+ #my-proyects {
+     /*display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;*/
  }
 
  .proyectsContainer {
-     width: 100%;
-     max-width: 800px;
-     max-height: 600px;
-     height: 100%;
+     width: 100%;     
+     height: 100vh;
      transform-style: preserve-3d;
      display: flex;
      justify-content: center;
@@ -245,47 +243,21 @@
      align-items: center;
  }
 
- #item-1:checked ~ .carousel-container #project-3, #item-2:checked ~ .carousel-container #project-1, #item-3:checked ~ .carousel-container #project-2 {
-    transform: translatex(-40%) scale(.8);
-    opacity: .4;
-    z-index: 0;
-  }
-
-  #item-1:checked ~ .carousel-container #project-2, #item-2:checked ~ .carousel-container #project-3, #item-3:checked ~ .carousel-container #project-1 {
-    transform: translatex(40%) scale(.8);
-    opacity: .4;
-    z-index: 0;
-  }
-
-  #item-1:checked ~ .carousel-container #project-1, #item-2:checked ~ .carousel-container #project-2, #item-3:checked ~ .carousel-container #project-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-    
-    img {
-      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-    }
-  }
-
-
  .carousel-container {
-    display: flex;
+     display: flex;
      position: relative;
      width: 100%;
-     height: 100%;
      margin-bottom: 20px;
      transform-style: preserve-3d;
-     display: flex;
      justify-content: center;
      flex-direction: column;
      align-items: center;
  }
 
  .item-carousel {
-     margin: 0 15px 60px;
-     width: 320px;
-     height: 400px;
-     display: flex;
+     margin: 0 15px;
+     width: 15rem;
+     height: 20rem;
      display: -webkit-flex;
      align-items: flex-end;
      -webkit-align-items: flex-end;
@@ -299,7 +271,7 @@
  }
 
  .item-carousel:hover {
-     width: 500px;
+     width: 20rem;
      box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
      -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
  }
@@ -356,14 +328,32 @@
      background-image: url('../img/pokemon-preview.png');
  }
 
- .proyectsContainer {
-     width: 100%;
-     vertical-align: middle;
-     transform-style: preserve-3d;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
+ #item-1:checked~.carousel-container #project-3,
+ #item-2:checked~.carousel-container #project-1,
+ #item-3:checked~.carousel-container #project-2 {
+     transform: translatex(-40%) scale(.8);
+     opacity: .4;
+     z-index: 0;
+ }
+
+ #item-1:checked~.carousel-container #project-2,
+ #item-2:checked~.carousel-container #project-3,
+ #item-3:checked~.carousel-container #project-1 {
+     transform: translatex(40%) scale(.8);
+     opacity: .4;
+     z-index: 0;
+ }
+
+ #item-1:checked~.carousel-container #project-1,
+ #item-2:checked~.carousel-container #project-2,
+ #item-3:checked~.carousel-container #project-3 {
+     transform: translatex(0) scale(1);
+     opacity: 1;
+     z-index: 1;
+
+     img {
+         box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+     }
  }
 
  /*FIN MY PROJECTS*/
