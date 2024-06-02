@@ -222,7 +222,8 @@
 
  .work-skill-container {
      display: flex;
-     justify-content: space-around;
+     flex-flow: row wrap;
+     /*justify-content: space-around;*/
      height: 100%;
  }
 
@@ -235,6 +236,7 @@
      border-radius: 5px;
      padding: 0 10px 0 10px;
      background: rgba(51, 170, 51, .1);
+     margin: 4px;
  }
 
  .work-skill p {
