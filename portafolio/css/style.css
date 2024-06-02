@@ -125,7 +125,7 @@
  }
 
  .my-name {
-     color: #1abc9c !important;
+     color: #1abc9c;
  }
 
  /*FIN INICIO*/
@@ -223,8 +223,8 @@
 
 
  .work-description {
-     text-align: justify !important;
-     color: #ffffff !important;
+     text-align: justify;
+     color: #ffffff;
      margin: 15px 10px 15px 10px;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      font-size: 16px;
@@ -348,11 +348,11 @@
  }
 
  .item-carousel .item-desc p {
-     opacity: 0 !important;
+     opacity: 0;
  }
 
  .item-carousel:hover .item-desc p {
-     opacity: 1 !important;
+     opacity: 1;
  }
 
  .item-1 {
