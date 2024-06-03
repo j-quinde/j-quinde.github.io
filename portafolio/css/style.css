@@ -201,10 +201,13 @@
  }
 
  .work {
+     border: 1px solid #76abdf;
      background-color: #34495e;
      padding: 15px 0 15px 0;
      margin: 10px 0 10px 0;
-
+     border-radius: 10px;
+     /*box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);*/
+     box-shadow: 5px 10px 8px rgba(0, 0, 0, .5);
  }
 
  .work h5 {
@@ -398,11 +401,11 @@
      border-radius: 50%;
  }
 
- .border-around-img{
+ .border-around-img {
      filter: drop-shadow(1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 -1px 0 white);
  }
 
- 
+
 
  /*FIN IMAGENES*/
 
@@ -454,9 +457,6 @@
  .a-contact:hover {
      text-decoration: none;
  }
-
-
-
 
  .flex-container {
      display: flex;
