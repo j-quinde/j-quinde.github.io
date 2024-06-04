@@ -491,4 +491,5 @@
      /* Safari 3-8 */
      transform: scale(1.2);
      z-index: 1000;
+     cursor: pointer;
  }
