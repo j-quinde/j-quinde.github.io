@@ -1,4 +1,98 @@
-let offset = 1;
+const upperFirstLetter = (str) => {
+    const upper = str.charAt(0).toUpperCase() + str.slice(1);
+    return upper;
+}
+
+const lowerWord = (str) => {
+    const lower = str.toLowerCase();
+    return lower;
+}
+
+const upperWord = (str) => {
+    const upper = str.toUpperCase();
+    return upper;
+}
+
+const fillZeros = (number) => {
+    const newNumber = number.toString().padStart(4, '0');
+    return newNumber;
+}
+
+const jsonPokemon = async (id) => {
+    try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const dataPkm = await res.json();
+        const pokemon = {
+            id: dataPkm.id,
+            name_pkm: dataPkm.name,
+            type: dataPkm.types,
+            //img1: dataPkm.sprites.other.dream_world.front_default,
+            img1: dataPkm.sprites.front_default,
+            img2: dataPkm.sprites.other.home.front_default
+        };
+        //await pokemon.then((response) => {return response.data})
+        return pokemon;
+        /*datasKanto(pokemon);*/
+    } catch (error) {
+        console.log(error);
+    }
+}
+//------RESOLVIENDO PROMESA CON FUNCION THEN
+//const dataPokemon = jsonPokemon(5).then(val=> console.log(val));
+
+jsonPokemon(5).then((pokemon) => {
+    console.log(pokemon.id);
+    const cardContainer = document.querySelector('#cardContainer');
+    const cardPokemon = () => {
+        let div_card = document.createElement('div');
+        div_card.className = 'card';
+
+        let card_body = document.createElement('div');
+        card_body.className = 'card-body';
+
+        let cardDataPkm = document.createElement('div');
+        cardDataPkm.className = 'data-pkm';
+
+        let namePkm = document.createElement('p');
+
+        let spanNumber = document.createElement('span');
+        spanNumber.className = 'number-pkm';
+        spanNumber.textContent = ' N°'+fillZeros(pokemon.id)+' ';
+        
+        let typePkm = document.createElement('span');
+        typePkm.className = 'type-pokemon';
+
+        let imgPkm = document.createElement('img');
+        imgPkm.className = 'sprite-pkm';
+
+        namePkm.textContent = upperFirstLetter(pokemon.name_pkm);
+
+        const types_pokemon = pokemon.type.map((types) => {
+            return  `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
+        }).join(' ');
+
+        if(pokemon.img1){
+            imgPkm.src = pokemon.img1;
+        }else{
+            imgPkm.src = pokemon.img2;
+        }
+
+        cardContainer.appendChild(div_card);
+        div_card.appendChild(card_body);
+        card_body.appendChild(cardDataPkm);
+        cardDataPkm.innerHTML = types_pokemon;
+        namePkm.prepend(spanNumber);
+        cardDataPkm.prepend(namePkm);
+        card_body.appendChild(imgPkm);
+    }
+    cardPokemon();
+});
+
+
+
+
+
+/*let offset = 1;
 let limit = 12;
 
 const upperFirstLetter = (str) => {
@@ -101,7 +195,7 @@ const fetchDataRandom = async(id) =>{
         datasPokemon(pokemon);
     } catch (error) {
         //console.log(error);
-        alert('Pokémon no encontrado.');
+        alert('Pokémon no encontrado, pero aqui hay un Pikachu.');
         fetchDataRandom(25);//pikachu
     }    
 }
@@ -141,8 +235,8 @@ const fetchPokemonKanto = async(offset,limit) => {
 
 const div_pkm = document.querySelector('#div_list_pkm');
 const datasKanto = (pokemon) =>{
-    /*let li = document.createElement('li');
-    li.className = 'list-group-item';*/
+    ///let li = document.createElement('li');
+    //li.className = 'list-group-item';
 
     let div_content = document.createElement('div');
     div_content.className = 'col-md-3 align-items-center mt-2';
@@ -227,4 +321,4 @@ const changeRegion = () => {
     removeAllChildNodes(div_list);
     offset = first;
     fetchPokemonKanto(offset,limit);
-}
+}*/
