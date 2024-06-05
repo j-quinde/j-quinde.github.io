@@ -34,53 +34,56 @@ const jsonPokemon = async (id) => {
         console.log(error);
     }
 }
+
 //------RESOLVIENDO PROMESA CON FUNCION THEN
-jsonPokemon(5).then((pokemon) => {
-    const cardContainer = document.querySelector('#cardContainer');
-    const cardPokemon = () => {
-        let div_card = document.createElement('div');
-        div_card.className = 'card';
-
-        let card_body = document.createElement('div');
-        card_body.className = 'card-body';
-
-        let cardDataPkm = document.createElement('div');
-        cardDataPkm.className = 'data-pkm';
-
-        let namePkm = document.createElement('p');
-
-        let spanNumber = document.createElement('span');
-        spanNumber.className = 'number-pkm';
-        spanNumber.textContent = ' N°'+fillZeros(pokemon.id)+' ';
-        
-        let typePkm = document.createElement('span');
-        typePkm.className = 'type-pokemon';
-
-        let imgPkm = document.createElement('img');
-        imgPkm.className = 'sprite-pkm';
-
-        namePkm.textContent = upperFirstLetter(pokemon.name_pkm);
-
-        const types_pokemon = pokemon.type.map((types) => {
-            return  `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
-        }).join(' ');
-
-        if(pokemon.img1){
-            imgPkm.src = pokemon.img1;
-        }else{
-            imgPkm.src = pokemon.img2;
+for (let i = 1; i <= 5; i++) {
+    jsonPokemon(i).then((pokemon) => {
+        const cardContainer = document.querySelector('#cardContainer');
+        const cardPokemon = () => {
+            let div_card = document.createElement('div');
+            div_card.className = 'card';
+    
+            let card_body = document.createElement('div');
+            card_body.className = 'card-body';
+    
+            let cardDataPkm = document.createElement('div');
+            cardDataPkm.className = 'data-pkm';
+    
+            let namePkm = document.createElement('p');
+    
+            let spanNumber = document.createElement('span');
+            spanNumber.className = 'number-pkm';
+            spanNumber.textContent = ' N°'+fillZeros(pokemon.id)+' ';
+            
+            let typePkm = document.createElement('span');
+            typePkm.className = 'type-pokemon';
+    
+            let imgPkm = document.createElement('img');
+            imgPkm.className = 'sprite-pkm';
+    
+            namePkm.textContent = upperFirstLetter(pokemon.name_pkm);
+    
+            const types_pokemon = pokemon.type.map((types) => {
+                return  `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
+            }).join(' ');
+    
+            if(pokemon.img1){
+                imgPkm.src = pokemon.img1;
+            }else{
+                imgPkm.src = pokemon.img2;
+            }
+    
+            cardContainer.appendChild(div_card);
+            div_card.appendChild(card_body);
+            card_body.appendChild(cardDataPkm);
+            cardDataPkm.innerHTML = types_pokemon;
+            cardDataPkm.prepend(namePkm);
+            cardDataPkm.prepend(spanNumber);
+            card_body.appendChild(imgPkm);
         }
-
-        cardContainer.appendChild(div_card);
-        div_card.appendChild(card_body);
-        card_body.appendChild(cardDataPkm);
-        cardDataPkm.innerHTML = types_pokemon;
-        namePkm.prepend(spanNumber);
-        cardDataPkm.prepend(namePkm);
-        card_body.appendChild(imgPkm);
-    }
-    cardPokemon();
-});
+        cardPokemon();
+    });
+}
 
 
 

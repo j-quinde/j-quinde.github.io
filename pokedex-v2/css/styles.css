@@ -23,13 +23,18 @@
 .card-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card{
     text-align: center;
     height: auto;
+    width: 15rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
+    align-self: flex-start;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -52,6 +57,25 @@
 
 .data-pkm p{
     margin: 0 0 6px 0;
+}
+
+.number-pkm {
+    color: #A4A4A4 !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.type-pokemon {
+    border-radius: 30px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: arial;
+    font-size: 10px;
+    color: white;
 }
 
 /********************************/
@@ -77,23 +101,7 @@
     object-fit: contain;
 }
 
-.number-pkm {
-    color: #A4A4A4 !important;
-    font-size: 15px;
-    font-weight: bold;
-}
 
-.type-pokemon {
-    border-radius: 30px;
-    padding-right: 7px;
-    padding-left: 7px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 1px solid black;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-family: arial;
-    color: white;
-}
 
 .normal {
     background-color: #A8A77A;
