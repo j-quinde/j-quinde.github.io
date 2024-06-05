@@ -36,7 +36,6 @@ const jsonPokemon = async (id) => {
 }
 //------RESOLVIENDO PROMESA CON FUNCION THEN
 jsonPokemon(5).then((pokemon) => {
-    console.log(pokemon.id);
     const cardContainer = document.querySelector('#cardContainer');
     const cardPokemon = () => {
         let div_card = document.createElement('div');
