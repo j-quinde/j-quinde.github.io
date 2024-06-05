@@ -18,7 +18,7 @@ const fillZeros = (number) => {
     return newNumber;
 }
 
-const jsonPokemon = async (id) => {
+const fetchPokemon = async (id) => {
     try {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const dataPkm = await res.json();
@@ -37,7 +37,7 @@ const jsonPokemon = async (id) => {
 
 //------RESOLVIENDO PROMESA CON FUNCION THEN
 for (let i = 1; i <= 5; i++) {
-    jsonPokemon(i).then((pokemon) => {
+    fetchPokemon(i).then((pokemon) => {
         const cardContainer = document.querySelector('#cardContainer');
         const cardPokemon = () => {
             let div_card = document.createElement('div');
