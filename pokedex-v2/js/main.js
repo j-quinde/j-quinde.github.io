@@ -26,20 +26,15 @@ const jsonPokemon = async (id) => {
             id: dataPkm.id,
             name_pkm: dataPkm.name,
             type: dataPkm.types,
-            //img1: dataPkm.sprites.other.dream_world.front_default,
             img1: dataPkm.sprites.front_default,
             img2: dataPkm.sprites.other.home.front_default
         };
-        //await pokemon.then((response) => {return response.data})
         return pokemon;
-        /*datasKanto(pokemon);*/
     } catch (error) {
         console.log(error);
     }
 }
 //------RESOLVIENDO PROMESA CON FUNCION THEN
-//const dataPokemon = jsonPokemon(5).then(val=> console.log(val));
-
 jsonPokemon(5).then((pokemon) => {
     console.log(pokemon.id);
     const cardContainer = document.querySelector('#cardContainer');
