@@ -26,20 +26,32 @@
 }
 
 .card{
-    border-radius: 10px;
     text-align: center;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.card:hover {
+    -ms-transform: scale(1.05);
+    /* IE 9 */
+    -webkit-transform: scale(1.05);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+    z-index: 1000;
 }
 
 .card-body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-    
+    align-items: center;
     border-radius: 10px;
+    padding: 8px 8px 8px 16px;
+}
+
+.data-pkm p{
+    margin: 0 0 6px 0;
 }
 
 /********************************/
@@ -51,14 +63,7 @@
     transition: transform .2s;
 }*/
 
-.card:hover {
-    -ms-transform: scale(1.2);
-    /* IE 9 */
-    -webkit-transform: scale(1.2);
-    /* Safari 3-8 */
-    transform: scale(1.2);
-    z-index: 1000;
-}
+
 
 .spinner-border {
     height: 8rem;
