@@ -43,7 +43,10 @@ const fetchPokemon = () => {
     })
 }
 
+const myModal = new bootstrap.Modal(document.getElementById("myModal"), {});
+
 const cardPokemon = (pkm) => {
+
     pkm.forEach(pokemon => {
 
         const cardContainer = document.querySelector('#cardContainer');
@@ -87,10 +90,31 @@ const cardPokemon = (pkm) => {
         cardDataPkm.prepend(namePkm);
         cardDataPkm.prepend(spanNumber);
         card_body.appendChild(imgPkm);
+        div_card.onclick = () => {
+            myModal.show(pokemon)
+        }
     });
 }
 
 fetchPokemon()
+
+const openModal = document.getElementById("myModal");
+if (openModal) {
+    openModal.addEventListener('show.bs.modal', event => {
+        let data = event.relatedTarget;
+        let pName = document.querySelector(".pokemon-name");
+        let pNumber = document.querySelector(".pokemon-number");
+        let img = document.querySelector(".img-pokemon");
+        if (data.img1) {
+            img.src = data.img1;
+        } else {
+            img.src = data.img2;
+        }
+        
+        pName.textContent = upperFirstLetter(data.name);
+        pNumber.textContent = 'N°' + fillZeros(data.id);
+    })
+}
 
 /*const fetchPokemon = async (id) => {
     try {
