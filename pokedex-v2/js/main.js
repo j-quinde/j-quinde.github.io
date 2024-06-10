@@ -38,6 +38,7 @@ const fetchPokemon = () => {
             type: res.types,
             img1: res.sprites.front_default,
             img2: res.sprites.other.home.front_default,
+            img3: res.sprites.back_default,
             stats: res.stats
         }))
         cardPokemon(dataPokemon)
@@ -105,7 +106,8 @@ if (openModal) {
         let data = event.relatedTarget;
         let pName = document.querySelector(".pokemon-name");
         let pNumber = document.querySelector(".pokemon-number");
-        let img = document.querySelector(".img-pokemon");
+        let imgFront = document.querySelector("#front_default");
+        let imgBack = document.querySelector("#back_default");
         let dTypes = document.querySelector(".pokedex-types");
         let types_pokemon = data.type.map((types) => {
             return `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
@@ -124,20 +126,28 @@ if (openModal) {
 
         console.log(stat_pokemon)*/
 
+        
+
+        pName.textContent = upperFirstLetter(data.name);
+        pNumber.textContent = 'N°' + fillZeros(data.id);
+        if (data.img1) {
+            imgFront.src = data.img1;
+        } else {
+            imgFront.src = data.img2;
+        }
+
+        if (data.img3) {
+            imgBack.src = data.img3;
+        }else{
+            imgBack.src = 'img/pokeball.png';
+        }
+        dTypes.innerHTML = types_pokemon;
+
         data.stats.forEach((stat,i) => {
             let percent = ((stat.base_stat * 100) / 255).toFixed(2);
             let stat_order = eval(`stat_${i}`);
             stat_order.style.width = percent + '%';
         })
-
-        pName.textContent = upperFirstLetter(data.name);
-        pNumber.textContent = 'N°' + fillZeros(data.id);
-        if (data.img1) {
-            img.src = data.img1;
-        } else {
-            img.src = data.img2;
-        }
-        dTypes.innerHTML = types_pokemon;
     })
 }
 
