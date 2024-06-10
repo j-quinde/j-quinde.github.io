@@ -25,7 +25,7 @@ const limit = 9;
 
 const fetchPokemon = () => {
     const arrPokemons = [];
-    for (let i = startId; i <= endId; i++) {
+    for (let i = startId; i <= 12; i++) {
         const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${i}`;
         const jsonPokemon = fetch(urlPokemon).then((result) => result.json());
         arrPokemons.push(jsonPokemon);
@@ -37,7 +37,8 @@ const fetchPokemon = () => {
             name: res.name,
             type: res.types,
             img1: res.sprites.front_default,
-            img2: res.sprites.other.home.front_default
+            img2: res.sprites.other.home.front_default,
+            stats: res.stats
         }))
         cardPokemon(dataPokemon)
     })
@@ -105,14 +106,38 @@ if (openModal) {
         let pName = document.querySelector(".pokemon-name");
         let pNumber = document.querySelector(".pokemon-number");
         let img = document.querySelector(".img-pokemon");
+        let dTypes = document.querySelector(".pokedex-types");
+        let types_pokemon = data.type.map((types) => {
+            return `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
+        }).join(' ');
+        let stat_0 = document.querySelector(".stat-hp");
+        let stat_1 = document.querySelector(".stat-attack");
+        let stat_2 = document.querySelector(".stat-defense");
+        let stat_3 = document.querySelector(".stat-special-attack");
+        let stat_4 = document.querySelector(".stat-special-defense");
+        let stat_5 = document.querySelector(".stat-speed");
+
+        /*let stat_pokemon = data.stats.map((stat, i) => {
+            let stat_order = 'stat_' + i;
+            return `${stat_order}`.style = 'width: ' + parseInt(stat.base_stat) + '%';
+        })
+
+        console.log(stat_pokemon)*/
+
+        data.stats.forEach((stat,i) => {
+            let percent = ((stat.base_stat * 100) / 255).toFixed(2);
+            let stat_order = eval(`stat_${i}`);
+            stat_order.style.width = percent + '%';
+        })
+
+        pName.textContent = upperFirstLetter(data.name);
+        pNumber.textContent = 'N°' + fillZeros(data.id);
         if (data.img1) {
             img.src = data.img1;
         } else {
             img.src = data.img2;
         }
-        
-        pName.textContent = upperFirstLetter(data.name);
-        pNumber.textContent = 'N°' + fillZeros(data.id);
+        dTypes.innerHTML = types_pokemon;
     })
 }
 
