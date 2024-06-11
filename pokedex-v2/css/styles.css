@@ -70,6 +70,10 @@
     background-color: #D685AD;
 }
 
+.modal-header{
+    height: 2rem;
+}
+
 .navbar {
     position: fixed;
     overflow: hidden;
@@ -208,15 +212,36 @@
     margin: 10px 10px 10px 10px;
 }
 
-.progress{
-    margin: 5px 10px 5px 10px;
-    height: 2vh;
+.pokedex-types > span{
+    font-size: 15px;
+}
+
+.div-stat{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    margin: auto;
 }
 
 .stat-name{
     color: #ffffff;
     margin: 0 0 0 5px;
+    
 }
+
+.progress{
+    margin: 5px 10px 5px 10px;
+    height: 1.8vh;
+    width: 100%;
+}
+
+.stat-number{
+    margin: 0;
+    font-size: 11px;
+}
+
+
 
 /********************************/
 /*.card {

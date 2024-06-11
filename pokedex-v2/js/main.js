@@ -112,6 +112,7 @@ if (openModal) {
         let types_pokemon = data.type.map((types) => {
             return `<span class="type-pokemon ${types.type.name}">${upperWord(types_es[types.type.name])}</span>`;
         }).join(' ');
+        
         let stat_0 = document.querySelector(".stat-hp");
         let stat_1 = document.querySelector(".stat-attack");
         let stat_2 = document.querySelector(".stat-defense");
@@ -123,10 +124,7 @@ if (openModal) {
             let stat_order = 'stat_' + i;
             return `${stat_order}`.style = 'width: ' + parseInt(stat.base_stat) + '%';
         })
-
         console.log(stat_pokemon)*/
-
-        
 
         pName.textContent = upperFirstLetter(data.name);
         pNumber.textContent = 'N°' + fillZeros(data.id);
@@ -144,6 +142,8 @@ if (openModal) {
         dTypes.innerHTML = types_pokemon;
 
         data.stats.forEach((stat,i) => {
+            let p_numberStat = document.querySelector("."+`stat-n${i+1}`);
+            p_numberStat.textContent = stat.base_stat+'/255';
             let percent = ((stat.base_stat * 100) / 255).toFixed(2);
             let stat_order = eval(`stat_${i}`);
             stat_order.style.width = percent + '%';
