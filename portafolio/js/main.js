@@ -26,6 +26,29 @@ function OpenAlert() {
 
 ReactDOM.render(<OpenAlert />,document.getElementById('div_vermas'));
 */
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView:3,    
+    direction: 'horizontal',
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor:'true',
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  });
+  
   
 
 const openPokedex = () => {

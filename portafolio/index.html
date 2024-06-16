@@ -171,13 +171,13 @@
         <h1>Mis proyectos</h1>
         <hr class="line">
         <div class="projectsContainer">
-            <input type="radio" name="slider" id="item-1" checked>
+            <!--<input type="radio" name="slider" id="item-1" checked>
             <input type="radio" name="slider" id="item-2">
             <input type="radio" name="slider" id="item-3">
             <input type="radio" name="slider" id="item-4">
             <input type="radio" name="slider" id="item-5">
             <div class="carousel-container">
-                <!--<div class="item-carousel item-1" for="item-1" id="project-1" onclick="openPokedex()">-->
+                
                 <label class="item-carousel item-1" for="item-1" id="project-1">
                     <div class="item-desc">
                         <h5><b>Pokedex</b></h5>
@@ -190,7 +190,7 @@
                     <div class="item-desc">
                         <h5><b>Zona Horaria</b></h5>
                         <p>Muestra la hora por pais junto a su zona horaria en reloj digital y análogo.</p>
-                        <!--API >> https://worldtimeapi.org/pages/examples-->
+                        <!--API >> https://worldtimeapi.org/pages/examples
                     </div>
                 </label>
                 <label class="item-carousel item-1" for="item-3" id="project-3">
@@ -211,15 +211,58 @@
                         <p>Proyecto #5</p>
                     </div>
                 </label>
-            </div>
+            </div>-->
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    
+                    <div class="swiper-slide">
+                        <div class="item-carousel item-1">
+                            <div class="img-item"></div>
+                            <div class="item-desc">
+                                <h5><b>Pokedex</b></h5>
+                                <p>Realizado con HTML, CSS y JS. Muestra varios pokémon hasta la 8va generación.</p>
+                                <button class="btn-ir" onclick="openPokedex()">Empezar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item-carousel item-1">
+                            <div class="img-item"></div>
+                            <div class="item-desc">
+                                <h5><b>Zona Horaria</b></h5>
+                                <p>Muestra la hora por pais junto a su zona horaria en reloj digital y análogo.</p>
+                                <!--API >> https://worldtimeapi.org/pages/examples-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item-carousel item-1">
+                            <div class="img-item"></div>
+                            <div class="item-desc">
+                                <h5><b>Reproductor de música</b></h5>
+                                <p>Reproduce música</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item-carousel item-1">
+                            <div class="img-item"></div>
+                            <div class="item-desc">
+                                <h5><b>Red social</b></h5>
+                                <p>red social</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item-carousel item-1">
+                            <div class="img-item"></div>
+                            <div class="item-desc">
+                                <h5><b>Proyecto #5</b></h5>
+                                <p>Proyecto #5</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -228,8 +271,6 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </section>
